@@ -1,0 +1,10 @@
+docker run -d \
+    --name=unifi \
+    --restart=always \
+    --user=unifi \
+    -e TZ='America/Chicago' \
+    -p 3180:8080 \
+    -p 3143:8443 \
+    -p 3478:3478/udp \
+    -v /var/docker/unifi:/unifi \
+    jacobalberty/unifi:latest

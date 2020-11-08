@@ -1,0 +1,7 @@
+docker run -d \
+    --name wordpress \
+    --restart=always
+    -p 3080:80 \
+    -v wordpress:/var/www/html \
+    -v wordpress_db:/var/lib/mysql
+    wordpress
